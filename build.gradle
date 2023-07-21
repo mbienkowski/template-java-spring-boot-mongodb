@@ -46,7 +46,7 @@ dependencies {
 
     // MongoDB Migrations
     implementation "io.mongock:mongock:5.2.4"
-    implementation "io.mongock:mongock-springboot-v3:5.2.4"
+    implementation "io.mongock:mongock-springboot-v3:5.3.2"
     implementation "io.mongock:mongodb-springdata-v4-driver:5.2.4"
 
     // Test

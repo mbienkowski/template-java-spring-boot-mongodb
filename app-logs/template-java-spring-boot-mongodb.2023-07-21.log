@@ -682,3 +682,313 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 < Headers: {X-Frame-Options=[DENY], x-trace-id=[ewiwqkkjydafbgik], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Vary=[Origin, Access-Control-Request-Method, Access-Control-Request-Headers], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/problem+json]}
 < Body: {"type":"/errors/users/inactive","title":"Unauthorized","status":401,"detail":"User with login 'woVLdmpKEbZENFJfOUoC@template.com' is not active","instance":"/api/v1/user/authenticate","properties":{"timestamp":"2023-07-21T11:53:20.472105Z"}}
 < ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:34,200 [background-preinit] [INFO] [] [Version] HV000001: Hibernate Validator 8.0.1.Final 
+2023-07-21 16:22:34,224 [ForkJoinPool-1-worker-4] [INFO] [] [AuthenticateUserEndpointTest] Starting AuthenticateUserEndpointTest using Java 19.0.2 with PID 70595 (started by mbienkowski in /Users/mbienkowski/git-private/mbienkowski/template-java-spring-boot-mongodb) 
+2023-07-21 16:22:34,225 [ForkJoinPool-1-worker-4] [INFO] [] [AuthenticateUserEndpointTest] The following 1 profile is active: "dev" 
+2023-07-21 16:22:34,635 [ForkJoinPool-1-worker-4] [INFO] [] [RepositoryConfigurationDelegate] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode. 
+2023-07-21 16:22:34,666 [ForkJoinPool-1-worker-4] [INFO] [] [RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 29 ms. Found 1 MongoDB repository interfaces. 
+2023-07-21 16:22:34,973 [ForkJoinPool-1-worker-4] [INFO] [] [TomcatWebServer] Tomcat initialized with port(s): 0 (http) 
+2023-07-21 16:22:34,978 [ForkJoinPool-1-worker-4] [INFO] [] [Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"] 
+2023-07-21 16:22:34,979 [ForkJoinPool-1-worker-4] [INFO] [] [StandardService] Starting service [Tomcat] 
+2023-07-21 16:22:34,979 [ForkJoinPool-1-worker-4] [INFO] [] [StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.11] 
+2023-07-21 16:22:35,029 [ForkJoinPool-1-worker-4] [INFO] [] [[/]] Initializing Spring embedded WebApplicationContext 
+2023-07-21 16:22:35,030 [ForkJoinPool-1-worker-4] [INFO] [] [ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 798 ms 
+2023-07-21 16:22:35,195 [ForkJoinPool-1-worker-4] [INFO] [] [client] MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.9.1"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "aarch64", "version": "13.3.1"}, "platform": "Java/Oracle Corporation/19.0.2+7-44"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='replica-user', source='template-java-spring-boot-mongodb-db', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@63b2ca5a], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@596d76f9, com.mongodb.Jep395RecordCodecProvider@2fb19843]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@6731d43b], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null} 
+2023-07-21 16:22:35,217 [cluster-ClusterId{value='64ba94ab3cd8ed1f79e40f42', description='null'}-localhost:27017] [INFO] [] [cluster] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=20055750, setName='dbrs', canonicalAddress=mongodb:27017, hosts=[mongodb:27017], passives=[], arbiters=[], primary='mongodb:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, topologyVersion=TopologyVersion{processId=64ba6ffce19630148c8e9ff6, counter=6}, lastWriteDate=Fri Jul 21 16:22:31 CEST 2023, lastUpdateTimeNanos=85372152922833} 
+2023-07-21 16:22:35,703 [ForkJoinPool-1-worker-4] [INFO] [] [EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '' 
+2023-07-21 16:22:35,740 [ForkJoinPool-1-worker-4] [INFO] [] [DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4713a75e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1720a57e, org.springframework.security.web.context.SecurityContextHolderFilter@2bb03d6c, org.springframework.security.web.header.HeaderWriterFilter@59079e3b, org.springframework.security.web.authentication.logout.LogoutFilter@6bd24759, com.mbienkowski.template.user.security.JwtRequestFilter@6093f3cd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44f897a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a61a91f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d5c084d, org.springframework.security.web.session.SessionManagementFilter@695e2eb4, org.springframework.security.web.access.ExceptionTranslationFilter@4b1638d4, org.springframework.security.web.access.intercept.AuthorizationFilter@256ea1bb] 
+2023-07-21 16:22:35,791 [ForkJoinPool-1-worker-4] [INFO] [] [RunnerBuilderBase] Mongock runner COMMUNITY version[5.3.2] 
+2023-07-21 16:22:35,792 [ForkJoinPool-1-worker-4] [INFO] [] [RunnerBuilderBase] Running Mongock with NO metadata 
+2023-07-21 16:22:35,792 [ForkJoinPool-1-worker-4] [WARN] [] [RunnerBuilderBase] Property transaction-enabled not provided. It will become true as default in next versions. Set explicit value to false in case transaction are not desired. 
+2023-07-21 16:22:35,792 [ForkJoinPool-1-worker-4] [WARN] [] [RunnerBuilderBase] Property transaction-enabled not provided, but driver is transactionable. BY DEFAULT MONGOCK WILL RUN IN TRANSACTION MODE. 
+2023-07-21 16:22:35,923 [ForkJoinPool-1-worker-4] [INFO] [] [[/]] Initializing Spring TestDispatcherServlet '' 
+2023-07-21 16:22:35,923 [ForkJoinPool-1-worker-4] [INFO] [] [TestDispatcherServlet] Initializing Servlet '' 
+2023-07-21 16:22:35,924 [ForkJoinPool-1-worker-4] [INFO] [] [TestDispatcherServlet] Completed initialization in 1 ms 
+2023-07-21 16:22:35,957 [ForkJoinPool-1-worker-4] [INFO] [] [Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"] 
+2023-07-21 16:22:35,962 [ForkJoinPool-1-worker-4] [INFO] [] [TomcatWebServer] Tomcat started on port(s): 64152 (http) with context path '' 
+2023-07-21 16:22:35,971 [ForkJoinPool-1-worker-4] [INFO] [] [AuthenticateUserEndpointTest] Started AuthenticateUserEndpointTest in 1.898 seconds (process running for 2.587) 
+2023-07-21 16:22:36,034 [ForkJoinPool-1-worker-4] [INFO] [] [Reflections] Reflections took 16 ms to scan 1 urls, producing 2 keys and 2 values 
+2023-07-21 16:22:36,036 [ForkJoinPool-1-worker-4] [INFO] [] [Reflections] Reflections took 0 ms to scan 1 urls, producing 2 keys and 2 values 
+2023-07-21 16:22:36,043 [ForkJoinPool-1-worker-4] [INFO] [] [SystemUpdateExecutor] Mongock skipping the system update execution. All system change set items are already executed. 
+2023-07-21 16:22:36,044 [ForkJoinPool-1-worker-4] [INFO] [] [ChangeExecutorBase] PASSED OVER - {"id"="system-change-00001_before", "type"="before-execution", "author"="mongock", "class"="SystemChangeUnit00001", "method"="beforeExecution"} 
+2023-07-21 16:22:36,044 [ForkJoinPool-1-worker-4] [INFO] [] [ChangeExecutorBase] PASSED OVER - {"id"="system-change-00001", "type"="execution", "author"="mongock", "class"="SystemChangeUnit00001", "method"="execution"} 
+2023-07-21 16:22:36,044 [ForkJoinPool-1-worker-4] [INFO] [] [SystemUpdateExecutor] Mongock has finished the system update execution 
+2023-07-21 16:22:36,052 [ForkJoinPool-1-worker-4] [INFO] [] [Reflections] Reflections took 7 ms to scan 1 urls, producing 1 keys and 2 values 
+2023-07-21 16:22:36,055 [ForkJoinPool-1-worker-4] [INFO] [] [Reflections] Reflections took 3 ms to scan 1 urls, producing 1 keys and 2 values 
+2023-07-21 16:22:36,059 [ForkJoinPool-1-worker-4] [INFO] [] [MigrateExecutorBase] Mongock skipping the data migration. All change set items are already executed. 
+2023-07-21 16:22:36,059 [ForkJoinPool-1-worker-4] [INFO] [] [ChangeExecutorBase] PASSED OVER - {"id"="V20230101153000-add-active-field-to-user-entity", "type"="execution", "author"="default_author", "class"="V20230101153000_UserAddFieldActive", "method"="migrate"} 
+2023-07-21 16:22:36,059 [ForkJoinPool-1-worker-4] [INFO] [] [ChangeExecutorBase] PASSED OVER - {"id"="V20230201173500-add-removed-field-to-user-entity", "type"="execution", "author"="default_author", "class"="V20230201173500_UserAddFieldRemoved", "method"="migrate"} 
+2023-07-21 16:22:36,059 [ForkJoinPool-1-worker-4] [INFO] [] [MigrateExecutorBase] Mongock has finished 
+2023-07-21 16:22:36,552 [ForkJoinPool-1-worker-2] [TRACE] [xp82hqukry7xevha] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: xp82hqukry7xevha
+> RequestURL: http://localhost:64152/api/v1/client/dummy
+> Http-Method: GET
+> Content-Type: application/json
+> Headers: {Content-Type=[application/json;charset=UTF-8]}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:36,556 [ForkJoinPool-1-worker-2] [TRACE] [xp82hqukry7xevha] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: xp82hqukry7xevha
+< Duration (ms): 31
+< Response-Code: 401
+< Content-Type: application/problem+json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[xp82hqukry7xevha], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/problem+json]}
+< Body: {"type":"/errors/unauthorized","title":"Unauthorized","status":401,"detail":"Cannot access specified resource without authorization","instance":"/api/v1/client/dummy"}
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:36,646 [ForkJoinPool-1-worker-4] [TRACE] [a3qsztb0kgli6u1u] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: a3qsztb0kgli6u1u
+> RequestURL: http://localhost:64152/api/v1/user/authenticate
+> Http-Method: POST
+> Content-Type: application/json
+> Headers: {Content-Length=[133], Content-Type=[application/json;charset=UTF-8]}
+< Body: {"login":"llrPrYAlXkmeJWDgPWxN@template.com","password":"DeJAVHARgB","device":{"fingerprint":"f60a3deb-beba-4945-89e1-8fec5347d10d"}}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:36,684 [ForkJoinPool-1-worker-2] [TRACE] [4ti3avhsewygafji] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: 4ti3avhsewygafji
+> RequestURL: http://localhost:64152/api/v1/user/authenticate
+> Http-Method: POST
+> Content-Type: application/json
+> Headers: {Content-Length=[133], Content-Type=[application/json;charset=UTF-8]}
+< Body: {"login":"xKtzQXJFstLbxjPaYmvE@template.com","password":"SSAzpeSPXo","device":{"fingerprint":"98ea5f55-8732-4eb1-94e2-2dee9a4a61ba"}}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:36,693 [ForkJoinPool-1-worker-5] [TRACE] [v7k6zmxeiwdsbutj] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: v7k6zmxeiwdsbutj
+> RequestURL: http://localhost:64152/api/v1/user/authenticate
+> Http-Method: POST
+> Content-Type: application/json
+> Headers: {Content-Length=[133], Content-Type=[application/json;charset=UTF-8]}
+< Body: {"login":"ENldGrntuTCxGMfFvecI@template.com","password":"iksXhYWJOf","device":{"fingerprint":"d4730754-71c4-4aff-bf0d-a523c9fab193"}}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:36,910 [ForkJoinPool-1-worker-5] [TRACE] [v7k6zmxeiwdsbutj] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: v7k6zmxeiwdsbutj
+< Duration (ms): 214
+< Response-Code: 200
+< Content-Type: application/json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[v7k6zmxeiwdsbutj], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/json]}
+< Body: {"jwtToken":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFTmxkR3JudHVUQ3hHTWZGdmVjSUB0ZW1wbGF0ZS5jb20iLCJpc3MiOiJKd3RUb2tlblNlcnZpY2UiLCJpYXQiOjE2ODk5NDkzNTYsImV4cCI6MTg0NzYyOTM1Niwic2VjdXJpdHlUb2tlbiI6IjQ4OTdhMzc1LTI4ZmQtNGI5ZS04Y2Q5LTljOGI3NmRjNGY5MyJ9.rN7XRLKgkyohEFQpnhgrKTSz1_Tv4gbtSkFYFek-UoeNL9YVHpAe9MS9BNa7BIHQU_WspWb0jsNkpdnCDW-cCA"}
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:36,913 [ForkJoinPool-1-worker-5] [TRACE] [phafdtea3vvyu8u9] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: phafdtea3vvyu8u9
+> RequestURL: http://localhost:64152/api/v1/user/authenticate
+> Http-Method: POST
+> Content-Type: application/json
+> Headers: {Content-Length=[133], Content-Type=[application/json;charset=UTF-8]}
+< Body: {"login":"ENldGrntuTCxGMfFvecI@template.com","password":"iksXhYWJOf","device":{"fingerprint":"d4730754-71c4-4aff-bf0d-a523c9fab193"}}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:36,930 [ForkJoinPool-1-worker-4] [TRACE] [a3qsztb0kgli6u1u] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: a3qsztb0kgli6u1u
+< Duration (ms): 284
+< Response-Code: 200
+< Content-Type: application/json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[a3qsztb0kgli6u1u], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/json]}
+< Body: {"jwtToken":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsbHJQcllBbFhrbWVKV0RnUFd4TkB0ZW1wbGF0ZS5jb20iLCJpc3MiOiJKd3RUb2tlblNlcnZpY2UiLCJpYXQiOjE2ODk5NDkzNTYsImV4cCI6MTg0NzYyOTM1Niwic2VjdXJpdHlUb2tlbiI6ImUxMzA4ZTMzLWEyZDgtNDA5MC1hZTBlLWVhYTMzMGFlOTA2OCJ9.Rub-RQ5BMOn5Becp8c4fzpshz-ptB6dn_NQY3xJOqBb2Qm5VQtvlvz0jzKjIP_bs9m_Q_2z4Ehih0TB4ncIIEg"}
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:36,932 [ForkJoinPool-1-worker-2] [TRACE] [4ti3avhsewygafji] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: 4ti3avhsewygafji
+< Duration (ms): 247
+< Response-Code: 200
+< Content-Type: application/json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[4ti3avhsewygafji], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/json]}
+< Body: {"jwtToken":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ4S3R6UVhKRnN0TGJ4alBhWW12RUB0ZW1wbGF0ZS5jb20iLCJpc3MiOiJKd3RUb2tlblNlcnZpY2UiLCJpYXQiOjE2ODk5NDkzNTYsImV4cCI6MTg0NzYyOTM1Niwic2VjdXJpdHlUb2tlbiI6ImZjZDdlNThhLTFjZjgtNDE0NS05MTRjLWQ3OTVmOWE3ZjJiYyJ9.0Jo4UVwJKLrr8Ync5E45MLgRcG537lOqjccpwvGaza1kVnkSxyX77ogkjNH5Cu0Y_3bvoL2_y5BKhY_xXDorww"}
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:36,946 [ForkJoinPool-1-worker-2] [TRACE] [cgsvrusobhycew1q] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: cgsvrusobhycew1q
+> RequestURL: http://localhost:64152/api/v1/client/dummy
+> Http-Method: GET
+> Content-Type: application/json
+> Headers: {Authorization=[XXX], Content-Type=[application/json;charset=UTF-8]}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:36,952 [ForkJoinPool-1-worker-2] [TRACE] [cgsvrusobhycew1q] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: cgsvrusobhycew1q
+< Duration (ms): 6
+< Response-Code: 200
+< Content-Type: application/json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[cgsvrusobhycew1q], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], Content-Length=[21], X-XSS-Protection=[0], Content-Type=[application/json]}
+< Body: client-dummy-response
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:37,010 [ForkJoinPool-1-worker-5] [TRACE] [phafdtea3vvyu8u9] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: phafdtea3vvyu8u9
+< Duration (ms): 96
+< Response-Code: 200
+< Content-Type: application/json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[phafdtea3vvyu8u9], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/json]}
+< Body: {"jwtToken":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFTmxkR3JudHVUQ3hHTWZGdmVjSUB0ZW1wbGF0ZS5jb20iLCJpc3MiOiJKd3RUb2tlblNlcnZpY2UiLCJpYXQiOjE2ODk5NDkzNTcsImV4cCI6MTg0NzYyOTM1Nywic2VjdXJpdHlUb2tlbiI6IjQ4OTdhMzc1LTI4ZmQtNGI5ZS04Y2Q5LTljOGI3NmRjNGY5MyJ9.uQCU4o5gJN-cf5MDJv-MkLjGgR-Ra9rAvNM8MVrJwV6IrR310CCPZjWg8Tp0VSFXLxcB15e24ouS84j97dzaEw"}
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:37,039 [ForkJoinPool-1-worker-4] [TRACE] [8osbanfnbllggy2y] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: 8osbanfnbllggy2y
+> RequestURL: http://localhost:64152/api/v1/user/authenticate
+> Http-Method: POST
+> Content-Type: application/json
+> Headers: {Content-Length=[133], Content-Type=[application/json;charset=UTF-8]}
+< Body: {"login":"CtBaYoCmksbVpnUCZeyt@template.com","password":"hzenSUgyMW","device":{"fingerprint":"c7c8d92f-f0ea-46d2-9189-f4df50e0135f"}}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:37,041 [ForkJoinPool-1-worker-2] [TRACE] [y1rwf2sw7wnuljnj] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: y1rwf2sw7wnuljnj
+> RequestURL: http://localhost:64152/api/v1/user/authenticate
+> Http-Method: POST
+> Content-Type: application/json
+> Headers: {Content-Length=[133], Content-Type=[application/json;charset=UTF-8]}
+< Body: {"login":"GoqXlhQKkFEEiNkuZVTa@template.com","password":"FAqaOGCiCS","device":{"fingerprint":"55d5de15-3ff2-4e0f-a8b9-ea1d88e10e7c"}}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:37,097 [ForkJoinPool-1-worker-5] [TRACE] [7xmvb3qzxg0urj9a] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: 7xmvb3qzxg0urj9a
+> RequestURL: http://localhost:64152/api/v1/user/authenticate
+> Http-Method: POST
+> Content-Type: application/json
+> Headers: {Content-Length=[133], Content-Type=[application/json;charset=UTF-8]}
+< Body: {"login":"LdqNwJovUpcyWuxWwVND@template.com","password":"YHsMzHxXJg","device":{"fingerprint":"f16d439c-02db-4f5a-9648-92315ba74f7e"}}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:37,128 [ForkJoinPool-1-worker-4] [TRACE] [8osbanfnbllggy2y] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: 8osbanfnbllggy2y
+< Duration (ms): 89
+< Response-Code: 200
+< Content-Type: application/json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[8osbanfnbllggy2y], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/json]}
+< Body: {"jwtToken":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDdEJhWW9DbWtzYlZwblVDWmV5dEB0ZW1wbGF0ZS5jb20iLCJpc3MiOiJKd3RUb2tlblNlcnZpY2UiLCJpYXQiOjE2ODk5NDkzNTcsImV4cCI6MTg0NzYyOTM1Nywic2VjdXJpdHlUb2tlbiI6IjgxOTdiODZmLTM4MjgtNGZkOC1iNTA3LWVhYTRhOWEzNmY1NSJ9.RNdMJ6WTG7EgcQ_nFepidbl2Vs_7WiODwVNHWiqH8wSi5qYiyUQ578QR9jhmqh9V7xJK4u8ZGj83fP5YnFt3fA"}
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:37,130 [ForkJoinPool-1-worker-2] [TRACE] [y1rwf2sw7wnuljnj] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: y1rwf2sw7wnuljnj
+< Duration (ms): 88
+< Response-Code: 200
+< Content-Type: application/json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[y1rwf2sw7wnuljnj], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/json]}
+< Body: {"jwtToken":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJHb3FYbGhRS2tGRUVpTmt1WlZUYUB0ZW1wbGF0ZS5jb20iLCJpc3MiOiJKd3RUb2tlblNlcnZpY2UiLCJpYXQiOjE2ODk5NDkzNTcsImV4cCI6MTg0NzYyOTM1Nywic2VjdXJpdHlUb2tlbiI6ImE2NjU3ZDEwLWMzZjAtNGEzZC05NDk0LWJiOGY2MjEwYmJhYyJ9.rzsixbipmMSuAboa4zTvGKYltkJzUMoqLn7_loa4DnS6bXk8pKx0AOE7Kqo_iAFYDfst2mccFEh9NKXd6mt7uw"}
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:37,135 [ForkJoinPool-1-worker-2] [TRACE] [hma47j4upginxd5p] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: hma47j4upginxd5p
+> RequestURL: http://localhost:64152/api/v1/client/dummy
+> Http-Method: GET
+> Content-Type: application/json
+> Headers: {Authorization=[XXX], Content-Type=[application/json;charset=UTF-8]}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:37,136 [ForkJoinPool-1-worker-2] [TRACE] [hma47j4upginxd5p] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: hma47j4upginxd5p
+< Duration (ms): 0
+< Response-Code: 200
+< Content-Type: application/json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[hma47j4upginxd5p], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], Content-Length=[21], X-XSS-Protection=[0], Content-Type=[application/json]}
+< Body: client-dummy-response
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:37,187 [ForkJoinPool-1-worker-5] [TRACE] [7xmvb3qzxg0urj9a] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: 7xmvb3qzxg0urj9a
+< Duration (ms): 89
+< Response-Code: 200
+< Content-Type: application/json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[7xmvb3qzxg0urj9a], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/json]}
+< Body: {"jwtToken":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJMZHFOd0pvdlVwY3lXdXhXd1ZOREB0ZW1wbGF0ZS5jb20iLCJpc3MiOiJKd3RUb2tlblNlcnZpY2UiLCJpYXQiOjE2ODk5NDkzNTcsImV4cCI6MTg0NzYyOTM1Nywic2VjdXJpdHlUb2tlbiI6ImFjNTcwNGUxLWQ1NjEtNDRmYi1hNzgxLTI3N2ZiZDAwMTc1NCJ9.v_5zGym7PV42CwGNvDp50yFmj6pu_aeSsfZ4Wj9eSpVjK26elrKRRIwHMx1AbFBHvYuM-l1npO25R3gw6htXVA"}
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:37,195 [ForkJoinPool-1-worker-5] [TRACE] [cmvra94nlnws4poq] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: cmvra94nlnws4poq
+> RequestURL: http://localhost:64152/api/info
+> Http-Method: GET
+> Content-Type: application/json
+> Headers: {Content-Length=[332], Content-Type=[application/json;charset=UTF-8]}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:37,196 [ForkJoinPool-1-worker-5] [TRACE] [cmvra94nlnws4poq] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: cmvra94nlnws4poq
+< Duration (ms): 1
+< Response-Code: 401
+< Content-Type: application/problem+json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[cmvra94nlnws4poq], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/problem+json]}
+< Body: {"type":"/errors/unauthorized","title":"Unauthorized","status":401,"detail":"Cannot access specified resource without authorization","instance":"/api/info"}
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:37,221 [ForkJoinPool-1-worker-4] [TRACE] [oavtaftrezgkp0ly] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: oavtaftrezgkp0ly
+< Duration (ms): 90
+< Response-Code: 200
+< Content-Type: application/json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[oavtaftrezgkp0ly], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/json]}
+< Body: {"jwtToken":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDdEJhWW9DbWtzYlZwblVDWmV5dEB0ZW1wbGF0ZS5jb20iLCJpc3MiOiJKd3RUb2tlblNlcnZpY2UiLCJpYXQiOjE2ODk5NDkzNTcsImV4cCI6MTg0NzYyOTM1Nywic2VjdXJpdHlUb2tlbiI6IjZmNDBhZDk5LWY5ZDktNDcyYS1iMjViLTRkNTVmNzVhYTNkMiJ9.xpvi4qM4JvOTE-xWUXv8L_QUGbPQMQFRlU6wrflVPtJzxn0_QHu-_KpXjgNou5k2doKzcE9qu_3PKRW5z-Jc5w"}
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:37,222 [ForkJoinPool-1-worker-2] [TRACE] [pohug1ty8kemd66h] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: pohug1ty8kemd66h
+> RequestURL: http://localhost:64152/api/v1/user/authenticate
+> Http-Method: POST
+> Content-Type: application/json
+> Headers: {Content-Length=[133], Content-Type=[application/json;charset=UTF-8]}
+< Body: {"login":"ZjNIzZVMoVLhZOUyQflr@template.com","password":"kEkcAsrAvj","device":{"fingerprint":"8cf56949-731f-4b54-ac32-27fba126320a"}}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:37,318 [ForkJoinPool-1-worker-4] [TRACE] [vh6mqm3pgmfwyxpx] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: vh6mqm3pgmfwyxpx
+> RequestURL: http://localhost:64152/api/v1/user/authenticate
+> Http-Method: POST
+> Content-Type: application/json
+> Headers: {Content-Length=[133], Content-Type=[application/json;charset=UTF-8]}
+< Body: {"login":"rCUuCkMpTXNmpTeXiroz@template.com","password":"VvJIndKgoM","device":{"fingerprint":"0c506ac9-6aee-475f-b340-9fdcaf7e17bb"}}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:37,325 [ForkJoinPool-1-worker-2] [TRACE] [pohug1ty8kemd66h] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: pohug1ty8kemd66h
+< Duration (ms): 102
+< Response-Code: 200
+< Content-Type: application/json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[pohug1ty8kemd66h], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/json]}
+< Body: {"jwtToken":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJaak5JelpWTW9WTGhaT1V5UWZsckB0ZW1wbGF0ZS5jb20iLCJpc3MiOiJKd3RUb2tlblNlcnZpY2UiLCJpYXQiOjE2ODk5NDkzNTcsImV4cCI6MTg0NzYyOTM1Nywic2VjdXJpdHlUb2tlbiI6IjA1NTM4ODVjLTM0ODItNDQ4YS1hMTM1LWEzNmZhN2UzMGQzNSJ9.hIh2O5wW-dBDPDuGS8IIr8K4iidJvFFvqKijCjyu9hb9zOveEbTj2ylAbJXlQehKlMv6DEXdkGKemm9lRxfQHQ"}
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:37,329 [ForkJoinPool-1-worker-2] [TRACE] [xpudctktebax72qe] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: xpudctktebax72qe
+> RequestURL: http://localhost:64152/api/v1/admin/dummy
+> Http-Method: GET
+> Content-Type: application/json
+> Headers: {Authorization=[XXX], Content-Type=[application/json;charset=UTF-8]}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:37,330 [ForkJoinPool-1-worker-2] [TRACE] [xpudctktebax72qe] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: xpudctktebax72qe
+< Duration (ms): 1
+< Response-Code: 200
+< Content-Type: application/json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[xpudctktebax72qe], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], Content-Length=[20], X-XSS-Protection=[0], Content-Type=[application/json]}
+< Body: admin-dummy-response
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:37,415 [ForkJoinPool-1-worker-4] [TRACE] [vh6mqm3pgmfwyxpx] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: vh6mqm3pgmfwyxpx
+< Duration (ms): 97
+< Response-Code: 401
+< Content-Type: application/problem+json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[vh6mqm3pgmfwyxpx], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/problem+json]}
+< Body: {"type":"/errors/users/inactive","title":"Unauthorized","status":401,"detail":"User with login 'rCUuCkMpTXNmpTeXiroz@template.com' is not active","instance":"/api/v1/user/authenticate","properties":{"timestamp":"2023-07-21T14:22:37.409496Z"}}
+< ---------- End of Server Outgoing Response ---------- 
+2023-07-21 16:22:37,416 [ForkJoinPool-1-worker-4] [TRACE] [vh6mqm3pgmfwyxpx] [Logbook] 
+> ---------- Server Incoming Request ----------
+> CorrelationId: vh6mqm3pgmfwyxpx
+> RequestURL: http://localhost:64152/api/v1/user/authenticate
+> Http-Method: POST
+> Content-Type: application/json
+> Headers: {Content-Length=[133], Content-Type=[application/json;charset=UTF-8]}
+> ---------- End of Server Incoming Request ---------- 
+2023-07-21 16:22:37,416 [ForkJoinPool-1-worker-4] [TRACE] [vh6mqm3pgmfwyxpx] [Logbook] 
+< ---------- Server Outgoing Response ----------
+< CorrelationId: vh6mqm3pgmfwyxpx
+< Duration (ms): 98
+< Response-Code: 401
+< Content-Type: application/problem+json
+< Headers: {X-Frame-Options=[DENY], x-trace-id=[vh6mqm3pgmfwyxpx], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], X-Content-Type-Options=[nosniff], Expires=[0], Pragma=[no-cache], X-XSS-Protection=[0], Content-Type=[application/problem+json]}
+< Body: {"type":"/errors/users/inactive","title":"Unauthorized","status":401,"detail":"User with login 'rCUuCkMpTXNmpTeXiroz@template.com' is not active","instance":"/api/v1/user/authenticate","properties":{"timestamp":"2023-07-21T14:22:37.409496Z"}}
+< ---------- End of Server Outgoing Response ---------- 

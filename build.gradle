@@ -42,7 +42,7 @@ dependencies {
     implementation 'com.bol:spring-data-mongodb-encrypt:2.8.0'
 
     // JWT
-    implementation 'com.auth0:java-jwt:4.3.0'
+    implementation 'com.auth0:java-jwt:4.4.0'
 
     // MongoDB Migrations
     implementation "io.mongock:mongock:5.2.4"

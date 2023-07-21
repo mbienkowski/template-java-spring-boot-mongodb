@@ -15,7 +15,7 @@ jobs:
         run: docker-compose -f docker-compose.pipeline.yml up -d
 
       - name: Run application tests
-        run: docker compose -f docker-compose.pipeline.yml exec -T builder gradle check
+        run: docker compose -f docker-compose.pipeline.yml exec -T builder gradle clean check
 
       - name: Run application build
         run: docker compose -f docker-compose.pipeline.yml exec -T builder gradle build -x test check

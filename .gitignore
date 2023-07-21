@@ -39,4 +39,6 @@ out/
 .vscode/
 
 ### Project Specific ###
-logs/*.log
+/app-logs/*
+!/app-logs/.gitkeep
+

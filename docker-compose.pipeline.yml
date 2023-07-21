@@ -1,0 +1,45 @@
+version: "2.1"
+
+services:
+
+  builder:
+    image: gradle:jdk19
+    entrypoint: sleep infinity
+    working_dir: /usr/src/app
+    environment:
+      - MONGODB_HOST=mongodb
+      - TZ=Europe/Warsaw
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - mongo-network
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:6
+    command: mongod --replSet dbrs --bind_ip_all
+    networks:
+      - mongo-network
+    healthcheck:
+      test: test $$(mongosh --eval 'db.adminCommand("ping")' | grep -c "ok") -eq 1
+      interval: 2s
+      timeout: 3s
+      retries: 5
+
+  mongo-init:
+    image: mongo:6
+    restart: "no"
+    networks:
+      - mongo-network
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    volumes:
+      - ./docker/mongodb/init-rs.sh:/scripts/init-rs.sh
+      - ./docker/mongodb/init-user.js:/scripts/init-user.js
+    command: /bin/bash /scripts/init-rs.sh
+
+networks:
+  mongo-network:
+    driver: bridge

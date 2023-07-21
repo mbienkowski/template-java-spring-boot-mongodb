@@ -1,0 +1,29 @@
+name: Build
+run-name: "Build: ${{ github.ref_name }}"
+
+on: push
+jobs:
+
+  test-and-build:
+    name: Test & build application
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run build environment
+        run: docker-compose -f docker-compose.pipeline.yml up -d
+
+      - name: Run application tests with coverage
+        run: docker compose -f docker-compose.pipeline.yml exec -T builder gradle check
+
+      - name: Run application build
+        run: docker compose -f docker-compose.pipeline.yml exec -T builder gradle build -x test check
+
+      - name: Change output files permissions
+        if: ${{ always() }}
+        run: docker compose -f docker-compose.pipeline.yml exec -T builder chmod 777 -R ./build/ ./.gradle/
+
+      - name: Stop build environment
+        if: always()
+        run: docker-compose -f docker-compose.pipeline.yml kill

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <springProperty scope="context" name="app-name" source="spring.application.name"/>
+
+  <contextName>${app-name}</contextName>
+
+  <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+      <layout class="com.mbienkowski.template.logging.masking.PatternMaskingLayout">
+        <maskJsonFields>password,pass,pwd,jwtToken</maskJsonFields>
+        <pattern>%date [%thread] [%level] [%X{traceId:-}] [%logger{0}] %msg %n</pattern>
+      </layout>
+    </encoder>
+  </appender>
+
+  <appender name="File" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <prudent>true</prudent>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>app-logs/${app-name}.%d.log</fileNamePattern>
+    </rollingPolicy>
+    <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+      <layout class="com.mbienkowski.template.logging.masking.PatternMaskingLayout">
+        <maskJsonFields>password,pass,pwd,jwtToken</maskJsonFields>
+        <pattern>%date [%thread] [%level] [%X{traceId:-}] [%logger{0}] %msg %n</pattern>
+      </layout>
+    </encoder>
+  </appender>
+
+  <root level="info">
+    <springProfile name="!production &amp; !staging">
+      <appender-ref ref="Console"/>
+    </springProfile>
+
+    <appender-ref ref="File" />
+  </root>
+
+</configuration>

@@ -18,10 +18,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ProblemDetail;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
@@ -61,19 +63,22 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(JwtRequestFilter jwtRequestFilter, HttpSecurity http, ObjectMapper mapper) throws Exception {
         // Enable CORS and disable CSRF
-        http.cors().and().csrf().disable()
-            .sessionManagement().sessionCreationPolicy(STATELESS);
+        http.cors(AbstractHttpConfigurer::disable)
+            .csrf(AbstractHttpConfigurer::disable)
+            .sessionManagement(session -> session.sessionCreationPolicy(STATELESS));
 
         // Set permissions on endpoints
-        http.authorizeHttpRequests()
-            .requestMatchers("/health", "/api/v1/user/authenticate").permitAll()
-            .anyRequest().authenticated();
+        http.authorizeHttpRequests(authorizeRequests -> {
+                authorizeRequests.requestMatchers("/health", "/api/v1/user/authenticate").permitAll();
+                authorizeRequests.anyRequest().authenticated();
+            }
+        );
 
         // Set filter that will authenticate the users via auth header
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 
         // Return 401 instead of 403 for unauthenticated requests
-        http.exceptionHandling().authenticationEntryPoint(new CustomAuthenticationEntryPoint(mapper));
+        http.exceptionHandling(exceptionHandling -> exceptionHandling.authenticationEntryPoint(new CustomAuthenticationEntryPoint(mapper)));
 
         return http.build();
     }

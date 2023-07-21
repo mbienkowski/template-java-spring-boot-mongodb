@@ -33,7 +33,7 @@ This is a template application with multiple things preconfigured to be used rig
   - Look into already existing [`UserInactiveException`](./src/main/java/com/mbienkowski/template/exception/user/UserInactiveException.java) for more details.
 
 ### 🕹 JUnit Tests
-- ✅ All tests are running in parallel (both classes & tests).
+- ✅ All tests are running in parallel in a way, that only one test class is run at a time, but multiple tests from that class in parallel.
 - ✅ Setup Integration Tests by extending the [`BaseIntegrationTest`](./src/test/java/com/mbienkowski/template/BaseIntegrationTest.java) class.
 
 ### 🗞 Logging

@@ -36,7 +36,7 @@ dependencies {
 
     // Commons
     implementation 'org.apache.commons:commons-lang3:3.13.0'
-    implementation 'commons-io:commons-io:2.13.0'
+    implementation 'commons-io:commons-io:2.15.0'
 
     // Encryption of data at rest in MongoDB
     implementation 'com.bol:spring-data-mongodb-encrypt:2.8.0'

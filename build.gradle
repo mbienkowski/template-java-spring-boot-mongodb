@@ -32,7 +32,7 @@ dependencies {
 
     // Logging
     implementation 'org.zalando:logbook-core:3.7.2'
-    implementation 'org.zalando:logbook-spring-boot-starter:3.3.0'
+    implementation 'org.zalando:logbook-spring-boot-starter:3.7.2'
 
     // Commons
     implementation 'org.apache.commons:commons-lang3:3.13.0'

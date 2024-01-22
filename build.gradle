@@ -39,7 +39,7 @@ dependencies {
     implementation 'commons-io:commons-io:2.15.1'
 
     // Encryption of data at rest in MongoDB
-    implementation 'com.bol:spring-data-mongodb-encrypt:2.8.0'
+    implementation 'com.bol:spring-data-mongodb-encrypt:2.9.0'
 
     // JWT
     implementation 'com.auth0:java-jwt:4.4.0'
